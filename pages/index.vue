@@ -1,6 +1,6 @@
 <template lang="pug">
 section
-	h1 Home 123123
+	h1 Home 123123123
 	p {{message}}
 	p {{result}}
 	input(v-model="message" )
