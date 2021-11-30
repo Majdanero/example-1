@@ -1,19 +1,24 @@
 <template lang="pug">
 section
-	h1 Home 123123123 12312
-	p {{message}}
-	p {{result}}
-	input(v-model="message" )
+	h2 Home
+	input(v-model="name")
+	p {{nameToAdd}}
+	button(@click="AddToList") Add to list
+	ul
+		li(v-for="(n, ni) in names" :key="ni") {{n}}
 </template>
 <script setup lang="ts">
-	const message = ref('Hello123');
-	const result = computed(() => {
-		return message.value + ' computed'
-	})
+	const names = ref([]);
+	const name = ref('John');
+	const nameToAdd = computed(() => name.value ? `Name: ${name.value}` : '');
+	const AddToList = () => {
+		names.value.push(nameToAdd.value);
+		name.value = '';
+	}
 </script>
 <style lang="scss">
 	section {
-		h1 {
+		h2 {
 			color: red;
 		}
 	}
