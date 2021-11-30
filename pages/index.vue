@@ -6,7 +6,7 @@ section
 	input(v-model="message" )
 </template>
 <script setup lang="ts">
-	const message = ref('Hello');
+	const message = ref('Hello123');
 	const result = computed(() => {
 		return message.value + ' computed'
 	})
