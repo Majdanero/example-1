@@ -9,7 +9,7 @@ section
 </template>
 <script setup lang="ts">
 	const names = ref([]);
-	const name = ref('John');
+	const name = ref('Szymon');
 	const nameToAdd = computed(() => name.value ? `Name: ${name.value}` : '');
 	const AddToList = () => {
 		names.value.push(nameToAdd.value);
