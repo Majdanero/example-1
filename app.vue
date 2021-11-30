@@ -21,5 +21,17 @@ input {
 	border: 1px solid #ffffff;
 	border-radius: 5px;
 	padding: 5px 10px;
+	margin: 5px;
+}
+button {
+	margin: 5px;
+	border: 1px solid #ffffff;
+	border-radius: 5px;
+	padding: 5px 10px;
+	background-color: rgba(#ffffff, 0.2);
+	cursor: pointer;
+	&:hover {
+		background-color: rgba(#ffffff, 0.3);
+	}
 }
 </style>
